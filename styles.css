@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #f5f1e8;
+  color: #1e1e1e;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e1e;
+  color: #f5f1e8;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  margin-top: 2rem;
+  padding: 12px 24px;
+  border: 1px solid #f5f1e8;
+  color: #f5f1e8;
+  text-decoration: none;
+}
+
+section {
+  padding: 5rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
