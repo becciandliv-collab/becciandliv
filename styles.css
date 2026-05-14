@@ -603,3 +603,129 @@ a {
     transition: none;
   }
 }
+/* =========================================
+   OAK LEAF + ACORN ORNAMENTS
+   ========================================= */
+
+.parchment,
+.story-section,
+.section-green,
+.rsvp-section,
+.hero,
+.site-footer {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero ornament under subtitle */
+
+.hero-ornament {
+  width: min(280px, 72vw);
+  height: 34px;
+  margin: 1.5rem auto 0;
+  opacity: 0.95;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 34' fill='none' stroke='%23dfc88a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 17H84'/%3E%3Cpath d='M196 17H272'/%3E%3Cpath d='M93 17c0-5 4-8 8-8 3 0 6 2 8 5 2-3 4-5 8-5 4 0 8 3 8 8-4 0-8 3-10 6-3 3-7 6-14 6-6 0-10-3-13-6-3-3-6-6-11-6z'/%3E%3Cpath d='M128 12c0-5 4-8 12-8s12 3 12 8c0 1-1 2-1 3 0 7-6 12-11 15-5-3-11-8-11-15 0-1-1-2-1-3z'/%3E%3Cpath d='M128 12h24'/%3E%3Cpath d='M140 21v6'/%3E%3Cpath d='M187 17c0-5-4-8-8-8-3 0-6 2-8 5-2-3-4-5-8-5-4 0-8 3-8 8 4 0 8 3 10 6 3 3 7 6 14 6 6 0 10-3 13-6 3-3 6-6 11-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Ornament under section headings */
+
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: min(240px, 62vw);
+  height: 28px;
+  margin: 0.9rem auto 0;
+  opacity: 0.85;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 28' fill='none' stroke='%23c3a35f' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 14H70'/%3E%3Cpath d='M170 14H232'/%3E%3Cpath d='M78 14c0-4 3-7 7-7 3 0 5 1 7 4 2-3 4-4 7-4 4 0 7 3 7 7-4 0-6 2-9 5-3 3-6 5-12 5s-9-2-12-5c-3-3-5-5-10-5z'/%3E%3Cpath d='M111 10c0-4 3-6 9-6s9 2 9 6c0 1 0 2-1 3 0 5-4 9-8 11-4-2-8-6-8-11 0-1-1-2-1-3z'/%3E%3Cpath d='M111 10h18'/%3E%3Cpath d='M120 18v5'/%3E%3Cpath d='M162 14c0-4-3-7-7-7-3 0-5 1-7 4-2-3-4-4-7-4-4 0-7 3-7 7 4 0 6 2 9 5 3 3 6 5 12 5s9-2 12-5c3-3 5-5 10-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Subtle corner oak/acorn motifs on sections */
+
+.parchment::after,
+.story-section::after,
+.section-green::after,
+.rsvp-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23c3a35f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M76 14c-10 1-18 7-23 16-4 7-6 13-14 18 10 2 18-1 24-8-3 10-8 17-19 25 14 3 26-2 34-17 7-13 5-27-2-34z'/%3E%3Cpath d='M22 82c12-11 24-25 37-47'/%3E%3Cpath d='M42 53c-6-1-11 0-16 4'/%3E%3Cpath d='M52 39c-6-1-12 1-18 5'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23c3a35f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 14c10 1 18 7 23 16 4 7 6 13 14 18-10 2-18-1-24-8 3 10 8 17 19 25-14 3-26-2-34-17-7-13-5-27 2-34z'/%3E%3Cpath d='M78 82C66 71 54 57 41 35'/%3E%3Cpath d='M58 53c6-1 11 0 16 4'/%3E%3Cpath d='M48 39c6-1 12 1 18 5'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' fill='none' stroke='%23c3a35f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 30c1-9 9-16 18-16 10 0 18 7 19 16H22z'/%3E%3Cpath d='M40 30c-11 0-19 8-19 19 0 14 11 24 19 27 8-3 19-13 19-27 0-11-8-19-19-19z'/%3E%3Cpath d='M40 9c1 5-2 8-5 10'/%3E%3Cpath d='M34 19c2 1 4 3 5 6'/%3E%3Cpath d='M46 19c-2 1-4 3-5 6'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' fill='none' stroke='%23c3a35f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 30c1-9 9-16 18-16 10 0 18 7 19 16H22z'/%3E%3Cpath d='M40 30c-11 0-19 8-19 19 0 14 11 24 19 27 8-3 19-13 19-27 0-11-8-19-19-19z'/%3E%3Cpath d='M40 9c1 5-2 8-5 10'/%3E%3Cpath d='M34 19c2 1 4 3 5 6'/%3E%3Cpath d='M46 19c-2 1-4 3-5 6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position:
+    top 18px left 18px,
+    top 18px right 18px,
+    bottom 18px left 26px,
+    bottom 18px right 26px;
+  background-size:
+    72px 72px,
+    72px 72px,
+    42px 42px,
+    42px 42px;
+}
+
+/* Stronger motif on parchment sections */
+.parchment::after {
+  opacity: 0.22;
+}
+
+/* Footer mini ornament */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0.75rem;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 22px;
+  opacity: 0.65;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 22' fill='none' stroke='%23dfc88a' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 11H56'/%3E%3Cpath d='M104 11H152'/%3E%3Cpath d='M64 11c0-3 3-5 6-5s6 2 6 5c0 1 0 1-1 2 0 4-3 7-5 8-2-1-5-4-5-8 0-1-1-1-1-2z'/%3E%3Cpath d='M64 11h12'/%3E%3Cpath d='M70 17v4'/%3E%3Cpath d='M96 11c0-4-3-6-6-6-2 0-4 1-5 3-1-2-3-3-5-3-3 0-6 2-6 6 3 0 5 2 7 4 2 2 5 4 9 4s7-2 9-4c2-2 4-4 7-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.site-footer {
+  padding-top: 2.75rem;
+}
+
+/* Mobile softening */
+
+@media (max-width: 700px) {
+  .hero-ornament {
+    width: min(220px, 68vw);
+    height: 28px;
+  }
+
+  .section-heading h2::after {
+    width: min(180px, 56vw);
+    height: 24px;
+  }
+
+  .parchment::after,
+  .story-section::after,
+  .section-green::after,
+  .rsvp-section::after {
+    background-size:
+      48px 48px,
+      48px 48px,
+      28px 28px,
+      28px 28px;
+    background-position:
+      top 12px left 12px,
+      top 12px right 12px,
+      bottom 12px left 14px,
+      bottom 12px right 14px;
+    opacity: 0.14;
+  }
+}
