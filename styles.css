@@ -729,3 +729,158 @@ a {
     opacity: 0.14;
   }
 }
+/* =========================================
+   DRAMATIC OAK LEAF + ACORN ILLUSTRATED BORDER
+   Add this at the very bottom of styles.css
+   ========================================= */
+
+/* Keeps decorative overlays from interfering with clicking */
+body {
+  position: relative;
+}
+
+/* Fixed illustrated border around the whole page */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0.8rem;
+  z-index: 40;
+  pointer-events: none;
+  border: 1px solid rgba(195, 163, 95, 0.48);
+  box-shadow:
+    inset 0 0 0 1px rgba(223, 200, 138, 0.18),
+    inset 0 0 42px rgba(14, 13, 11, 0.38);
+}
+
+/* Keep header above the decorative frame */
+.site-header {
+  z-index: 60;
+}
+
+/* Dramatic corner botanical illustrations */
+.hero,
+.parchment,
+.story-section,
+.section-green,
+.rsvp-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.parchment::before,
+.story-section::before,
+.section-green::before,
+.rsvp-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.24;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' fill='none' stroke='%23c3a35f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M169 22c-27 3-49 19-62 43-10 18-15 37-36 50 28 6 49-3 67-23-8 28-24 51-54 72 39 7 72-10 93-49 19-35 13-74-8-93z'/%3E%3Cpath d='M41 192c36-34 70-75 106-139'/%3E%3Cpath d='M87 129c-17-2-31 1-45 12'/%3E%3Cpath d='M112 92c-19-2-35 3-52 16'/%3E%3Cpath d='M139 53c-14 0-26 5-38 15'/%3E%3Cpath d='M70 169c-3-16-1-31 7-45'/%3E%3Cpath d='M103 139c-2-16 2-31 12-45'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' fill='none' stroke='%23c3a35f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M51 22c27 3 49 19 62 43 10 18 15 37 36 50-28 6-49-3-67-23 8 28 24 51 54 72-39 7-72-10-93-49-19-35-13-74 8-93z'/%3E%3Cpath d='M179 192c-36-34-70-75-106-139'/%3E%3Cpath d='M133 129c17-2 31 1 45 12'/%3E%3Cpath d='M108 92c19-2 35 3 52 16'/%3E%3Cpath d='M81 53c14 0 26 5 38 15'/%3E%3Cpath d='M150 169c3-16 1-31-7-45'/%3E%3Cpath d='M117 139c2-16-2-31-12-45'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130' fill='none' stroke='%23dfc88a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M31 48c2-18 17-31 34-31 19 0 34 13 36 31H31z'/%3E%3Cpath d='M65 48c-23 0-39 17-39 40 0 26 22 43 39 50 17-7 39-24 39-50 0-23-16-40-39-40z'/%3E%3Cpath d='M65 9c2 10-4 17-12 21'/%3E%3Cpath d='M53 30c7 3 11 9 12 17'/%3E%3Cpath d='M77 30c-7 3-11 9-12 17'/%3E%3Cpath d='M34 54c18 5 42 5 62 0'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130' fill='none' stroke='%23dfc88a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M31 48c2-18 17-31 34-31 19 0 34 13 36 31H31z'/%3E%3Cpath d='M65 48c-23 0-39 17-39 40 0 26 22 43 39 50 17-7 39-24 39-50 0-23-16-40-39-40z'/%3E%3Cpath d='M65 9c2 10-4 17-12 21'/%3E%3Cpath d='M53 30c7 3 11 9 12 17'/%3E%3Cpath d='M77 30c-7 3-11 9-12 17'/%3E%3Cpath d='M34 54c18 5 42 5 62 0'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position:
+    top 2.2rem left 2.2rem,
+    top 2.2rem right 2.2rem,
+    bottom 2rem left 3rem,
+    bottom 2rem right 3rem;
+  background-size:
+    clamp(120px, 18vw, 210px),
+    clamp(120px, 18vw, 210px),
+    clamp(58px, 8vw, 96px),
+    clamp(58px, 8vw, 96px);
+}
+
+/* Make actual section content sit above the illustrations */
+.section-heading,
+.detail-grid,
+.story-panel,
+.two-column,
+.accordion,
+.rsvp-embed,
+.registry-box,
+.section-intro,
+.rsvp-section .button {
+  position: relative;
+  z-index: 2;
+}
+
+/* Stronger border framing just inside the hero */
+.hero::after {
+  border-color: rgba(223, 200, 138, 0.55);
+  box-shadow:
+    inset 0 0 0 1px rgba(195, 163, 95, 0.22),
+    inset 0 0 80px rgba(14, 13, 11, 0.52);
+}
+
+/* Illustrated divider beneath all major headings */
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: min(340px, 78vw);
+  height: 42px;
+  margin: 1rem auto 0;
+  opacity: 0.9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 42' fill='none' stroke='%23c3a35f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 21H98'/%3E%3Cpath d='M242 21H330'/%3E%3Cpath d='M108 21c0-7 5-11 11-11 5 0 8 3 11 7 3-4 7-7 12-7 6 0 11 4 11 11-7 0-11 4-15 8-5 5-10 8-19 8s-14-3-19-8c-4-4-8-8-15-8z'/%3E%3Cpath d='M157 15c0-7 5-11 13-11s13 4 13 11c0 2-1 3-1 4 0 8-7 14-12 18-5-4-12-10-12-18 0-1-1-2-1-4z'/%3E%3Cpath d='M157 15h26'/%3E%3Cpath d='M170 26v9'/%3E%3Cpath d='M232 21c0-7-5-11-11-11-5 0-8 3-11 7-3-4-7-7-12-7-6 0-11 4-11 11 7 0 11 4 15 8 5 5 10 8 19 8s14-3 19-8c4-4 8-8 15-8z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Gives cards a slightly more manuscript / invitation feel */
+.card,
+.registry-box,
+.story-panel,
+.rsvp-embed {
+  outline: 1px solid rgba(223, 200, 138, 0.18);
+  outline-offset: -8px;
+}
+
+/* More gothic hover state */
+.button-gold:hover,
+.button-gold:focus {
+  background: var(--soft-gold);
+  box-shadow: 0 0 0 4px rgba(195, 163, 95, 0.18);
+}
+
+/* Mobile: keep it decorative but not cramped */
+@media (max-width: 700px) {
+  body::after {
+    inset: 0.45rem;
+  }
+
+  .hero::before,
+  .parchment::before,
+  .story-section::before,
+  .section-green::before,
+  .rsvp-section::before {
+    opacity: 0.14;
+    background-position:
+      top 1rem left 1rem,
+      top 1rem right 1rem,
+      bottom 1rem left 1.2rem,
+      bottom 1rem right 1.2rem;
+    background-size:
+      78px,
+      78px,
+      42px,
+      42px;
+  }
+
+  .section-heading h2::after {
+    width: min(230px, 68vw);
+    height: 32px;
+  }
+
+  .card,
+  .registry-box,
+  .story-panel,
+  .rsvp-embed {
+    outline-offset: -5px;
+  }
+}
